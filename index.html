@@ -3,11 +3,21 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="refresh" content="0;URL=./mine" />
-    <title>Redirect to index page</title>
+    <meta name="description" content="Статистика путешествий. Разработка програмного обеспечения. Рецензии на книги. Сорок два.">
+    <title>Глеб Лобастов</title>
+    <script>
+      function handleLoad() {
+        setTimeout(function() {
+          window.document.body.innerHTML=window.content.innerHTML;
+        }, 200);
+      }
+    </script>
   </head>
-  <body>
-    <h1>Re-directing...</h1>
-    <p>You are being re-directed, if nothing happens, please
-      <a href="./mine">follow this link</a></p>
+  <body onload="handleLoad()">
+    <noscript id="content">
+      <h1>Переадресация на главную страницу сайта</h1>
+      <p>Вы будете перенаправлены на главную страницу сайта, если ничего не происходит, пожалуйста
+        <a href="./mine">перейдите по ссылке</a></p>
+    </noscript>
   </body>
 </html>
